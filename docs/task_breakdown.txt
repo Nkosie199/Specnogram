@@ -1,0 +1,52 @@
+Here is a list of tasks to be completed in fulfilment of the Specnogram project (in no particular order):
+
+Documentation (2 days):
+1. Add architecture, entity relationship and use case UML diagrams respectively (1 day)
+2. Add all tickets to the Jira board with acceptance and testing criteria, etc where applicable (2 days)
+
+Design (11 days):
+1. Login page (1 day)
+2. Register & Forgot password pages with prototype (1 day)
+3. Home page/ Dashboard (2 days)
+4. Project flow CRUD functionality (2 days)
+5. Task flow CRUD functionality (2 days)
+6. Notify assignee functionality (1 day)
+7. Generate Gantt chart functionality (1 day)
+8. Compile and test overall prototype (1 day)
+
+Testing (9 days):
+1. Integrate Mockito and JUnit test suite with sample tests for backend (1 day)
+2. Integrate Jest and Cypress test suite with sample tests for frontend (1 day)
+3. Create Postman collection with sample tests for respective endpoints (1 day)
+4. Integrate Sentry and OpenSearch for identifying runtime errors and logging respectively (1 day)
+5. Complete backend test suite for unit testing with comprehensive coverage (1 day)
+6. Complete frontend test suite for unit testing with comprehensive coverage (1 day)
+7. Complete test suite for full regression testing with Cypress (3 days)
+
+Backend Implementation (9 days):
+1. Oauth2 registration, login & forgot password flows (2 days)
+2. Set up Postgres database from schema fulfilment (1 day)
+3. Create User, Roles, Project & Task models and controllers (1 day)
+4. Create User, Roles, Project & Task services and views (2 days)
+5. Restrict user functionality based on user role permissions (1 day)
+6. Add and test Simple Queue Service notification system (2 days) 
+
+Frontend Implementation (14 days):
+1. Create Login & Register pages according to design (1 day)
+2. Create Forgot Password page according to design and integrate with OAuth2 flow (2 days)
+3. Setup Redux for state management and test pre-authentication flow (1 day)
+4. Implement home page/ dashboard according to design (3 days)
+5. Project flow CRUD functionality (2 days)
+6. Task flow CRUD functionality (2 days)
+7. Create Gantt chart view component (2 days)
+8. Add notification trigger with task is assigned or status changes (1 day)
+
+Dev Ops (9 days):
+1. Create EC2, Postgres DB, OpenSearch and Simple Queue Service (SQS) resources in AWS (1 day)
+2. Create and deploy dockerized container for the backend and frontend respectively (1 day)
+3. Investigate and implement the best approach for enabling CD/CI given current architecture (Github workflows, Jenkins, Swarmpit?) (1 day)
+4. Implement and test the best approach for enabling CD/CI (1 day)
+5. Create and deploy a kubernetes cluster to the EC2 instance (2 days)
+6. Investigate the best approach for separating environments for development, staging, performance and production respectively (1 day)
+7. Implement the best approach for separating environments for development, staging, performance and production respectively (1 day)
+8. Deploy v1.0.0 of the application to all environments including production (1 day)
