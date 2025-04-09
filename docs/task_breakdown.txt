@@ -1,6 +1,6 @@
 Here is a list of tasks to be completed in fulfilment of the Specnogram project (in no particular order):
 
-Documentation (2 days):
+Documentation (3 days):
 1. Add architecture, entity relationship and use case UML diagrams respectively (1 day)
 2. Add all tickets to the Jira board with acceptance and testing criteria, etc where applicable (2 days)
 
@@ -50,3 +50,23 @@ Dev Ops (9 days):
 6. Investigate the best approach for separating environments for development, staging, performance and production respectively (1 day)
 7. Implement the best approach for separating environments for development, staging, performance and production respectively (1 day)
 8. Deploy v1.0.0 of the application to all environments including production (1 day)
+
+As per the proposed timeline, I recommend a team of two skilled full-stack developers to complete this project.
+These developers should commence independent tasks in parallel while maintaining constant communication and regularly reviewing each other's work.
+Both should be proficient in GitHub branching strategies and jointly responsible for creating bugfix tickets to resolve any issues that arise.
+
+One of the developers should specialize in frontend development, with expertise in designing visually appealing and responsive user interfaces using Figma.
+This developer should also have extensive experience translating designs into code using the React framework.
+Developer 1 will be responsible for the following epics: Design and Frontend Implementation.
+
+The second full-stack developer should have strong experience with unit and regression testing frameworks such as JUnit, Mockito, Jest, and Cypress.
+Test-first development is recommended to ensure the system is scalable, robust, and has minimal unforeseen bugs.
+This developer should also have in-depth knowledge of Java Spring Boot, AWS hosting, and DevOps tools such as Jenkins, Docker, and Kubernetes.
+Developer 2 will be responsible for the following epics: Testing, Backend Implementation, and DevOps.
+
+Assuming a project start date of 1 May 2025 (excluding potential absences and public holidays), the project is estimated to take 5–7 weeks to complete.
+The earliest the client can expect to receive version 1.0.0 of Specnogram is Monday, 9 June 2025.
+An additional two weeks have been included as buffer time to accommodate unforeseen challenges and complexities in the development process.
+
+Best regards,
+Nkosi
