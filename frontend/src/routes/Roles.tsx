@@ -1,6 +1,7 @@
 import * as React from "react";
 import api from "../api/api";
 import { Role } from "../types/types";
+import { Box } from "theme-ui";
 
 export const Roles: React.FC = () => {
   const [roles, setRoles] = React.useState<Role[]>([]);
@@ -10,7 +11,11 @@ export const Roles: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <Box
+      sx={{
+        p: 3,
+      }}
+    >
       <h2>Roles</h2>
       <ul>
         {roles.map(r => (
@@ -19,6 +24,6 @@ export const Roles: React.FC = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </Box>
   );
 };

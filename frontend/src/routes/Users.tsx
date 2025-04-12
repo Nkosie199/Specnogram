@@ -1,6 +1,7 @@
 import * as React from "react";
 import api from "../api/api";
 import { User } from "../types/types";
+import { Box } from "theme-ui";
 
 export const Users: React.FC = () => {
   const [users, setUsers] = React.useState<User[]>([]);
@@ -10,7 +11,11 @@ export const Users: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <Box
+      sx={{
+        p: 3,
+      }}
+    >
       <h2>Users</h2>
       <ul>
         {users.map(user => (
@@ -19,6 +24,6 @@ export const Users: React.FC = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </Box>
   );
 };

@@ -8,14 +8,14 @@ CREATE TABLE roles (
 );
 
 CREATE TABLE users (
-    user_id INT PRIMARY KEY,
+    user_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_name VARCHAR(100) NOT NULL,
     role_id INT REFERENCES roles(role_id),
     email VARCHAR(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE projects (
-    project_id INT PRIMARY KEY,
+    project_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id INT NOT NULL,
     title VARCHAR(50) NOT NULL,
     description TEXT,
@@ -23,7 +23,7 @@ CREATE TABLE projects (
 );
 
 CREATE TABLE tasks (
-    task_id INT PRIMARY KEY,
+    task_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     project_id INT REFERENCES projects(project_id),
     title VARCHAR(100) NOT NULL,
     description TEXT,
@@ -35,7 +35,7 @@ CREATE TABLE tasks (
 );
 
 CREATE TABLE notifications (
-    notification_id INT PRIMARY KEY,
+    notification_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id INT REFERENCES users(user_id),
     message TEXT NOT NULL,
     is_read BOOLEAN DEFAULT FALSE,

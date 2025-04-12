@@ -1,6 +1,7 @@
 import * as React from "react";
 import api from "../api/api";
 import { Notification } from "../types/types";
+import { Box } from "theme-ui";
 
 export const Notifications: React.FC = () => {
   const [notifications, setNotifications] = React.useState<Notification[]>([]);
@@ -10,7 +11,11 @@ export const Notifications: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <Box
+      sx={{
+        p: 3,
+      }}
+    >
       <h2>Notifications</h2>
       <ul>
         {notifications.map(n => (
@@ -19,6 +24,6 @@ export const Notifications: React.FC = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </Box>
   );
 };

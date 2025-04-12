@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Home, Users, Projects, Tasks, Notifications, Roles } from "./routes";
+import ProjectView from "./services/project/ProjectView";
+import TaskView from "./services/task/TaskView";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/roles" element={<Roles />} />
+        <Route path="/projects/:id" element={<ProjectView />} />
+        <Route path={"/tasks/" + 1} element={<TaskView />} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,7 @@
 import * as React from "react";
 import api from "../api/api";
 import { Task } from "../types/types";
+import { Box } from "theme-ui";
 
 export const Tasks: React.FC = () => {
   const [tasks, setTasks] = React.useState<Task[]>([]);
@@ -10,7 +11,11 @@ export const Tasks: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <Box
+      sx={{
+        p: 3,
+      }}
+    >
       <h2>Tasks</h2>
       <ul>
         {tasks.map(task => (
@@ -19,6 +24,6 @@ export const Tasks: React.FC = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </Box>
   );
 };

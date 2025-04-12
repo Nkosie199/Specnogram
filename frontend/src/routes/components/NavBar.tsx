@@ -1,11 +1,10 @@
 /** @jsxImportSource theme-ui */
 import * as React from "react";
-import { Link } from "react-router-dom";
-import { Box } from "theme-ui";
+import { Link, useNavigate } from "react-router-dom";
+import { Box, Button, Text } from "theme-ui";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/users", label: "Users" },
   { to: "/projects", label: "Projects" },
   { to: "/tasks", label: "Tasks" },
   { to: "/notifications", label: "Notifications" },
@@ -13,6 +12,13 @@ const navLinks = [
 ];
 
 export const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    alert("Logged out!");
+    navigate("/login");
+  };
+
   return (
     <Box
       as="nav"
@@ -30,27 +36,38 @@ export const Navbar: React.FC = () => {
     >
       <Box
         sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
           fontWeight: "bold",
           fontSize: 3,
-          mb: 4,
+          mb: 3,
           textAlign: "center",
           color: "primary",
         }}
       >
-        Specnogram
+        <img
+          src="/assets/images/specno_logo.jpg"
+          alt="Specnogram Logo"
+          style={{ width: "60px", marginBottom: "8px" }}
+        />
+        <Text
+          sx={{
+            color: "text",
+          }}
+        >
+          Specnogram
+        </Text>
       </Box>
 
-      {navLinks.map((link) => (
-        <Link
-          key={link.to}
-          to={link.to}
-          style={{ textDecoration: "none" }}
-        >
+      {navLinks.map(link => (
+        <Link key={link.to} to={link.to} style={{ textDecoration: "none" }}>
           <Box
             sx={{
               px: 3,
               py: 2,
               borderRadius: "md",
+              color: "text",
               "&:hover": {
                 bg: "primary",
                 color: "background",
@@ -62,6 +79,14 @@ export const Navbar: React.FC = () => {
           </Box>
         </Link>
       ))}
+
+      <Button
+        onClick={() => {
+          handleLogout();
+        }}
+      >
+        Log Out
+      </Button>
     </Box>
   );
 };

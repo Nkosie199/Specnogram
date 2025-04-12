@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import { Box, Heading } from "theme-ui";
 
-export const DashboardCard = ({ title, children, }) => {
+export const DashboardCard = ({ title, children }) => {
   return (
     <Box
       sx={{
@@ -18,11 +18,9 @@ export const DashboardCard = ({ title, children, }) => {
       <Heading as="h2" sx={{ fontSize: 3, mb: 3 }}>
         {title}
       </Heading>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-        {children}
-      </Box>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>{children}</Box>
     </Box>
-  )
-}
+  );
+};
 
 export default DashboardCard;
