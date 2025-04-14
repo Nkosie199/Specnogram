@@ -2,6 +2,7 @@
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Box, Button, Text } from "theme-ui";
+import api from "../../api/api";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -14,9 +15,12 @@ const navLinks = [
 export const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     alert("Logged out!");
-    navigate("/login");
+    const res = await api.post("/auth/logout", { credentials: "include" });
+    console.log("Log out result: ", res)
+    localStorage.removeItem("user")
+    navigate("/");
   };
 
   return (

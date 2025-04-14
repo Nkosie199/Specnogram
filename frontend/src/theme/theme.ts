@@ -20,5 +20,5 @@ export const theme = {
       bg: "danger",
       color: "white",
     },
-  },
+  }
 };

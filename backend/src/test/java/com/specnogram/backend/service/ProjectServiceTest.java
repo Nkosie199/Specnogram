@@ -4,7 +4,6 @@ import com.specnogram.backend.model.Project;
 import com.specnogram.backend.repository.ProjectRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.mockito.Mockito;
 
 import java.util.Optional;
 import java.util.List;
