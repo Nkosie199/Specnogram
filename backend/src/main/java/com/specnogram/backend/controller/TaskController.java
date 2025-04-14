@@ -27,6 +27,11 @@ public class TaskController {
         return taskService.getTaskById(id).orElseThrow();
     }
 
+    @GetMapping("/projects/{id}")
+    public List<Task> getTasksByProjectId(@PathVariable Integer id) {
+        return taskService.getAllTasksByProjectId(id);
+    }
+
     @GetMapping("/status/{status}")
     public List<Task> getTasksByStatus(@PathVariable String status) {
         return taskService.getTasksByStatus(status);
@@ -35,6 +40,11 @@ public class TaskController {
     @PostMapping
     public Task createTask(@RequestBody Task task) {
         return taskService.createTask(task);
+    }
+
+    @PutMapping("/{id}")
+    public Task updateTask(@PathVariable Integer id, @RequestBody Task task) {
+        return taskService.updateTask(task);
     }
 
     @DeleteMapping("/{id}")

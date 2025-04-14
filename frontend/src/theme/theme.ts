@@ -3,8 +3,9 @@ export const theme = {
     text: "#fff",
     background: "#1e1f25",
     muted: "#2a2b31",
-    primary: "#6c63ff",
+    primary: "#107fce",
     secondary: "#ff6584",
+    danger: "#800000"
   },
   buttons: {
     primary: {
@@ -13,6 +14,10 @@ export const theme = {
     },
     secondary: {
       bg: "secondary",
+      color: "white",
+    },
+    danger: {
+      bg: "danger",
       color: "white",
     },
   },

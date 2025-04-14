@@ -28,6 +28,10 @@ public class ProjectService {
         return projectRepository.save(project);
     }
 
+    public Project updateProject(Project project) {
+        return projectRepository.save(project);
+    }
+
     public void deleteProject(Integer id) {
         projectRepository.deleteById(id);
     }

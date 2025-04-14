@@ -9,13 +9,10 @@ import lombok.Setter;
 @Entity
 @Table(name = "roles", schema = "specnogram")
 public class Role {
-
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "role_id")
     private Integer roleId;
-
-    @Column(name = "user_id", nullable = false)
-    private Integer userId;
 
     @Column(nullable = false, length = 50)
     private String description;

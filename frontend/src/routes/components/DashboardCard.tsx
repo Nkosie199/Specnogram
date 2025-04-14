@@ -9,9 +9,8 @@ export const DashboardCard = ({ title, children }) => {
         borderRadius: "16px",
         p: 3,
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-        transition: "transform 0.2s",
         "&:hover": {
-          transform: "translateY(-5px)",
+          cursor: "pointer"
         },
       }}
     >

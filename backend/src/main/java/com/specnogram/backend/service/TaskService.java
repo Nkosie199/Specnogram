@@ -20,6 +20,10 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
+    public List<Task> getAllTasksByProjectId(Integer id) {
+        return taskRepository.findByProjectId(id);
+    }
+
     public Optional<Task> getTaskById(Integer id) {
         return taskRepository.findById(id);
     }
@@ -29,6 +33,10 @@ public class TaskService {
     }
 
     public Task createTask(Task task) {
+        return taskRepository.save(task);
+    }
+
+    public Task updateTask(Task task) {
         return taskRepository.save(task);
     }
 

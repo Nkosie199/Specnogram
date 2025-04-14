@@ -2,8 +2,9 @@ import * as React from "react";
 import api from "../api/api";
 import { Project } from "../types/types";
 import { Box, Button } from "theme-ui";
-import CreateProjectModal from "../services/project/components/CreateProjectModal";
+import CreateProjectModal from "../services/project/components/CreateProject";
 import { useNavigate } from "react-router-dom";
+import * as Moment from 'moment'
 
 export const Projects: React.FC = () => {
   const [projects, setProjects] = React.useState<Project[]>([]);
@@ -34,8 +35,14 @@ export const Projects: React.FC = () => {
           onClick={() => {
             openCreateProjectModal();
           }}
+          sx={{
+            "&:hover": {
+              bg: "highlight",
+              cursor: "pointer"
+            },
+          }}
         >
-          Create new Project
+          Create Project
         </Button>
       </Box>
       {showCreateProjectModal && <CreateProjectModal onClose={() => closeCreateProjectModal()} />}
@@ -57,11 +64,13 @@ export const Projects: React.FC = () => {
                 boxShadow: "sm",
                 "&:hover": {
                   bg: "highlight",
+                  cursor: "pointer"
                 },
               }}
             >
+              <span style={{ opacity: 0.7 }}>{project.projectId}</span>
               <span>{project.title}</span>
-              <span style={{ opacity: 0.7 }}>{project.deadline}</span>
+              <span style={{ opacity: 0.7 }}>{Moment(project.deadline).format('MMMM Do YYYY, h:mm A')}</span>
             </Button>
           </Box>
         ))}

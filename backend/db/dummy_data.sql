@@ -4,11 +4,11 @@ VALUES
   ('Bob Smith', 'bob@example.com', 2),
   ('Charlie Green', 'charlie@example.com', 3);
 
-INSERT INTO specnogram.roles (role_id, user_id, description)
+INSERT INTO specnogram.roles (role_id, description)
 VALUES
-  (1, 1, 'Admin'),
-  (2, 2, 'Project Manager'),
-  (3, 3, 'Developer');
+  (1, 'Admin'),
+  (2, 'Project Manager'),
+  (3, 'Developer');
 
 INSERT INTO specnogram.projects (user_id, title, description, deadline)
 VALUES

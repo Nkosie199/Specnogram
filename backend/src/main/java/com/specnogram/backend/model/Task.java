@@ -16,9 +16,8 @@ public class Task {
     @Column(name = "task_id")
     private Integer taskId;
 
-    @ManyToOne
-    @JoinColumn(name = "project_id", referencedColumnName = "project_id")
-    private Project project;
+    @Column(name = "project_id")
+    private Integer projectId;
 
     @Column(nullable = false, length = 100)
     private String title;

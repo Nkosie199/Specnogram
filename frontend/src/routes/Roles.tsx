@@ -20,7 +20,7 @@ export const Roles: React.FC = () => {
       <ul>
         {roles.map(r => (
           <li key={r.roleId}>
-            Role ID: {r.roleId} — User ID: {r.userId} — {r.description}
+            Role ID: {r.roleId} — {r.description}
           </li>
         ))}
       </ul>

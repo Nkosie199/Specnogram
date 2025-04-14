@@ -29,7 +29,7 @@ public class NotificationService {
     }
 
     public List<Notification> getNotificationsByUserId(Integer userId) {
-        return notificationRepository.findByUserUserId(userId);
+        return notificationRepository.findByUserId(userId);
     }
 
     public Notification createNotification(Notification notification) {

@@ -1,18 +1,9 @@
-# Step 1: Use an official Node.js image
-FROM node:16
-
-# Step 2: Set the working directory
-WORKDIR /app
-
-# Step 3: Copy package.json and install dependencies
-COPY package*.json ./
-RUN npm install
-
-# Step 4: Copy the rest of the application code
-COPY . .
-
-# Step 5: Expose the port
-EXPOSE 3001
-
-# Step 6: Run the backend app
-CMD ["npm", "start"]
+FROM openjdk:25-slim
+VOLUME /tmp
+ARG JAVA_OPTS
+ENV JAVA_OPTS=$JAVA_OPTS
+COPY build/libs/Specnogram-0.0.1-SNAPSHOT.jar specnogram.jar
+EXPOSE 8080
+ENTRYPOINT exec java $JAVA_OPTS -jar specnogram.jar
+# For Spring-Boot project, use the entrypoint below to reduce Tomcat startup time.
+#ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar specnogram.jar

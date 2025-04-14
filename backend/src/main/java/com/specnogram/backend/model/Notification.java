@@ -16,9 +16,8 @@ public class Notification {
     @Column(name = "notification_id")
     private Integer notificationId;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
-    private User user;
+    @Column(name = "user_id")
+    private Integer userId;
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String message;

@@ -5,8 +5,8 @@ import { Box, Button, Text } from "theme-ui";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/projects", label: "Projects" },
   { to: "/tasks", label: "Tasks" },
+  { to: "/projects", label: "Projects" },
   { to: "/notifications", label: "Notifications" },
   { to: "/roles", label: "Roles" },
 ];
@@ -53,6 +53,7 @@ export const Navbar: React.FC = () => {
         />
         <Text
           sx={{
+            mx: 2,
             color: "text",
           }}
         >
@@ -70,7 +71,8 @@ export const Navbar: React.FC = () => {
               color: "text",
               "&:hover": {
                 bg: "primary",
-                color: "background",
+                color: "text",
+                cursor: "pointer"
               },
               transition: "all 0.2s ease",
             }}
@@ -83,6 +85,12 @@ export const Navbar: React.FC = () => {
       <Button
         onClick={() => {
           handleLogout();
+        }}
+        sx={{
+          "&:hover": {
+            bg: "highlight",
+            cursor: "pointer"
+          },
         }}
       >
         Log Out

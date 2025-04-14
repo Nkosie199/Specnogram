@@ -9,12 +9,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/users" element={<Users />} />
-        <Route path="/projects" element={<Projects />} />
         <Route path="/tasks" element={<Tasks />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/roles" element={<Roles />} />
         <Route path="/projects/:id" element={<ProjectView />} />
-        <Route path={"/tasks/" + 1} element={<TaskView />} />
+        <Route path="/tasks/:id" element={<TaskView />} />
       </Routes>
     </Router>
   );

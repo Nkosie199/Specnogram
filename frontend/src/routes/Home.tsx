@@ -1,8 +1,7 @@
 /** @jsxImportSource theme-ui */
 import * as React from "react";
-import { useNavigate } from "react-router-dom";
 import { Box, Heading, Grid } from "theme-ui";
-import { Notifications, Projects, Roles, Tasks, Users } from ".";
+import { Notifications, Projects, Roles, Tasks } from ".";
 import { DashboardCard, Navbar } from "./components";
 
 export const Home: React.FC = () => {
@@ -29,9 +28,10 @@ export const Home: React.FC = () => {
           Dashboard
         </Heading>
         <Grid gap={4} columns={[1, 2, 2]} sx={{ mb: 4 }}>
-          <DashboardCard title="Projects" children={<Projects />} />
-          <DashboardCard title="Tasks" children={<Tasks />} />
-          <DashboardCard title="Notifications" children={<Notifications />} />
+          <DashboardCard title="📝 Tasks" children={<Tasks />} />
+          <DashboardCard title="📁 Projects" children={<Projects />} />
+          <DashboardCard title="🔔 Notifications" children={<Notifications />} />
+          <DashboardCard title="👥 User Roles" children={<Roles />} />
         </Grid>
       </Box>
     </Box>
