@@ -4,7 +4,7 @@ import { Project } from "../types/types";
 import { Box, Button } from "theme-ui";
 import CreateProjectModal from "../services/project/components/CreateProject";
 import { useNavigate } from "react-router-dom";
-import * as Moment from 'moment'
+import * as Moment from "moment";
 
 export const Projects: React.FC = () => {
   const [projects, setProjects] = React.useState<Project[]>([]);
@@ -38,7 +38,7 @@ export const Projects: React.FC = () => {
           sx={{
             "&:hover": {
               bg: "highlight",
-              cursor: "pointer"
+              cursor: "pointer",
             },
           }}
         >
@@ -64,13 +64,15 @@ export const Projects: React.FC = () => {
                 boxShadow: "sm",
                 "&:hover": {
                   bg: "highlight",
-                  cursor: "pointer"
+                  cursor: "pointer",
                 },
               }}
             >
               <span style={{ opacity: 0.7 }}>{project.projectId}</span>
               <span>{project.title}</span>
-              <span style={{ opacity: 0.7 }}>{Moment(project.deadline).format('MMMM Do YYYY, h:mm A')}</span>
+              <span style={{ opacity: 0.7 }}>
+                {Moment(project.deadline).format("MMMM Do YYYY, h:mm A")}
+              </span>
             </Button>
           </Box>
         ))}

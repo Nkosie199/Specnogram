@@ -88,12 +88,18 @@ export const CreateProject: React.FC<CreateProjectModalProps> = ({ onClose }) =>
 
               <Box mb={3}>
                 <Label htmlFor="deadline">Deadline</Label>
-                <Field as={Input} name="deadline" type="datetime-local" sx={{
-                  color: "white",
-                  '::-webkit-calendar-picker-indicator': {
-                    filter: 'invert(1)',
-                  },
-                }} required />
+                <Field
+                  as={Input}
+                  name="deadline"
+                  type="datetime-local"
+                  sx={{
+                    color: "white",
+                    "::-webkit-calendar-picker-indicator": {
+                      filter: "invert(1)",
+                    },
+                  }}
+                  required
+                />
               </Box>
 
               <Box sx={{ display: "flex", justifyContent: "flex-end", gap: 2 }}>

@@ -15,7 +15,7 @@ const Register: React.FC = () => {
   const handleRegister = async () => {
     try {
       const res = await api.post("/auth/register", form);
-      console.log("Register user response: ", res)
+      console.log("Register user response: ", res);
       navigate("/");
     } catch (err) {
       setError("Registration failed.");
@@ -31,13 +31,7 @@ const Register: React.FC = () => {
       <Input name="email" value={form.email} onChange={handleChange} mb={3} />
 
       <Label>Password</Label>
-      <Input
-        name="password"
-        type="password"
-        value={form.password}
-        onChange={handleChange}
-        mb={3}
-      />
+      <Input name="password" type="password" value={form.password} onChange={handleChange} mb={3} />
 
       {error && <Text sx={{ color: "red", mb: 2 }}>{error}</Text>}
 

@@ -1,0 +1,168 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+        <mxGraphModel dx="736" dy="372" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="aM9ryv3xv72pqoxQDRHE-1" value=":Frontend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+                    <mxGeometry x="160" y="40" width="100" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="aM9ryv3xv72pqoxQDRHE-3" value="Visit Login" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="aM9ryv3xv72pqoxQDRHE-1" target="aM9ryv3xv72pqoxQDRHE-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-90" y="70" as="sourcePoint"/>
+                        <mxPoint x="45" y="70.16666666666674" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="aM9ryv3xv72pqoxQDRHE-5" value=":Backend" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+                    <mxGeometry x="340" y="40" width="100" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="aM9ryv3xv72pqoxQDRHE-7" value="Redirect" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="aM9ryv3xv72pqoxQDRHE-1" target="aM9ryv3xv72pqoxQDRHE-5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="215" y="120" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="300" y="120"/>
+                        </Array>
+                        <mxPoint x="385" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="aM9ryv3xv72pqoxQDRHE-9" value="Login with Google" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="K52NyMrfWsEmeuBzhq6O-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="231" y="201" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="66" y="201"/>
+                        </Array>
+                        <mxPoint x="565.5000000000002" y="201" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="aM9ryv3xv72pqoxQDRHE-10" value="Google Login Page displayed" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="63" y="170" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="300" y="170"/>
+                        </Array>
+                        <mxPoint x="572.5000000000002" y="170" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-1" value=":AuthProvider (eg. Google)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+                    <mxGeometry x="520" y="40" width="100" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-4" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="22" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-5" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="K52NyMrfWsEmeuBzhq6O-4" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="65" y="570" as="sourcePoint"/>
+                        <mxPoint x="240" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-7" value="Redirect (to Google Login Page)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="aM9ryv3xv72pqoxQDRHE-5" target="K52NyMrfWsEmeuBzhq6O-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="395" y="140" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="485" y="140"/>
+                        </Array>
+                        <mxPoint x="570" y="140" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-8" value="Redirect (with code as param)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+                    <mxGeometry x="-0.0046" relative="1" as="geometry">
+                        <mxPoint x="209.66666666666663" y="259" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="315" y="259"/>
+                        </Array>
+                        <mxPoint x="389.5000000000002" y="259" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-9" value="Send code (POST /login)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" parent="1" source="aM9ryv3xv72pqoxQDRHE-1" target="aM9ryv3xv72pqoxQDRHE-5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="217" y="294" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="310" y="290"/>
+                        </Array>
+                        <mxPoint x="387" y="294" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-10" value="Redirect (with code as param)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="390" y="233" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="495" y="233"/>
+                        </Array>
+                        <mxPoint x="570" y="233" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-11" value="Exchange code for access token" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;exitX=0.5;exitY=0.833;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="390" y="318" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="490" y="318"/>
+                        </Array>
+                        <mxPoint x="570" y="318" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-12" value="Get user details (GET /auth/me)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="70" y="500" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="130" y="500"/>
+                        </Array>
+                        <mxPoint x="210" y="500" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-13" value="Access token" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="aM9ryv3xv72pqoxQDRHE-5" edge="1">
+                    <mxGeometry x="-0.0046" relative="1" as="geometry">
+                        <mxPoint x="389.99666666666667" y="346" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="495.33000000000004" y="346"/>
+                        </Array>
+                        <mxPoint x="569.8300000000003" y="346" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-15" value="User details" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+                    <mxGeometry x="-0.0046" relative="1" as="geometry">
+                        <mxPoint x="389.99666666666667" y="408" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="495.33000000000004" y="408"/>
+                        </Array>
+                        <mxPoint x="569.8300000000003" y="408" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-16" value="User details" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+                    <mxGeometry x="0.0009" relative="1" as="geometry">
+                        <mxPoint x="209.99666666666667" y="435" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="315.33000000000004" y="435"/>
+                        </Array>
+                        <mxPoint x="389.83000000000027" y="435" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-18" value="User details (store in localStorage)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="66" y="465" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="161.33000000000004" y="465"/>
+                        </Array>
+                        <mxPoint x="206" y="465" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="K52NyMrfWsEmeuBzhq6O-19" value="Get user details" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="389" y="379" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="431" y="378"/>
+                        </Array>
+                        <mxPoint x="570" y="379" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

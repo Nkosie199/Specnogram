@@ -5,19 +5,28 @@ import { getCurrentUser } from "./js/utils";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  
+
   const handleLogin = async () => {
-    const currentUser = await getCurrentUser()
+    const currentUser = getCurrentUser();
     if (currentUser) {
-      navigate("/");
+      navigate("/home");
     } else {
       window.location.href = "http://localhost:8080/oauth2/authorization/google";
     }
   };
 
   return (
-    <Box sx={{ display: 'flex', w: "100%", mx: "auto", mt: 5, justifyContent: 'center', alignItems: 'center' }}>
-      <Button onClick={handleLogin}>Login with Google</Button>
+    <Box
+      sx={{
+        display: "flex",
+        w: "100%",
+        mx: "auto",
+        mt: 5,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Button onClick={() => handleLogin()}>Login with Google</Button>
     </Box>
   );
 };

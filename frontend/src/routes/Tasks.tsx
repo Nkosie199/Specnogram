@@ -37,7 +37,7 @@ export const Tasks: React.FC = () => {
           sx={{
             "&:hover": {
               bg: "highlight",
-              cursor: "pointer"
+              cursor: "pointer",
             },
           }}
         >
@@ -63,13 +63,15 @@ export const Tasks: React.FC = () => {
                 boxShadow: "sm",
                 "&:hover": {
                   bg: "highlight",
-                  cursor: "pointer"
+                  cursor: "pointer",
                 },
               }}
             >
-              <span style={{ opacity: 0.7, margin: '0 5px' }}>{task.taskId}</span>
-              <span>{task.title} — {task.status} — Assigned to: {task.assignee || "N/A"}</span>
-              <span style={{ opacity: 0.7, margin: '0 5px' }}>{task.projectId}</span>
+              <span style={{ opacity: 0.7, margin: "0 5px" }}>{task.taskId}</span>
+              <span>
+                {task.title} — {task.status} — Assigned to: {task.assignee || "N/A"}
+              </span>
+              <span style={{ opacity: 0.7, margin: "0 5px" }}>{task.projectId}</span>
             </Button>
           </Box>
         ))}

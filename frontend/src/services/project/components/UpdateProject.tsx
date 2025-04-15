@@ -7,14 +7,14 @@ import { useParams } from "react-router-dom";
 const UpdateProject: React.FC = () => {
   const { id } = useParams();
   const [project, setProject] = React.useState<Project | null>(null);
-  const [creator, setCreator] = React.useState('')
+  const [creator, setCreator] = React.useState("");
   const [loading, setLoading] = React.useState(true);
   const [saving, setSaving] = React.useState(false);
 
   React.useEffect(() => {
     api.get(`/projects/${id}`).then(res => {
       setProject(res.data);
-      getUsernameFromId(res.data.userId)
+      getUsernameFromId(res.data.userId);
       setLoading(false);
     });
   }, [id]);
@@ -47,18 +47,18 @@ const UpdateProject: React.FC = () => {
       console.error("Error deleting project", err);
       alert("Error deleting project");
     }
-  }
+  };
 
   const handleBack = () => {
     window.history.back();
   };
 
   const getUsernameFromId = async (userId: number) => {
-    const user = await api.get(`/users/${userId}`)
-    const username = user?.data?.userName
-    setCreator(username)
-    return username
-  }
+    const user = await api.get(`/users/${userId}`);
+    const username = user?.data?.userName;
+    setCreator(username);
+    return username;
+  };
 
   if (loading || !project) return <p>Loading...</p>;
 
@@ -87,8 +87,8 @@ const UpdateProject: React.FC = () => {
         sx={{
           mb: 3,
           color: "white",
-          '::-webkit-calendar-picker-indicator': {
-            filter: 'invert(1)',
+          "::-webkit-calendar-picker-indicator": {
+            filter: "invert(1)",
           },
         }}
       />

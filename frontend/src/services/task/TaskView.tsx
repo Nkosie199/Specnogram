@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 
 const TaskView: React.FC = () => {
   const { id } = useParams();
-  const [task, setTask] = React.useState<Task | null>()
+  const [task, setTask] = React.useState<Task | null>();
 
   React.useEffect(() => {
     api.get(`/tasks/${id}`).then(res => {

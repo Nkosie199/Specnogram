@@ -5,7 +5,7 @@ export const theme = {
     muted: "#2a2b31",
     primary: "#107fce",
     secondary: "#ff6584",
-    danger: "#800000"
+    danger: "#800000",
   },
   buttons: {
     primary: {
@@ -20,5 +20,5 @@ export const theme = {
       bg: "danger",
       color: "white",
     },
-  }
+  },
 };

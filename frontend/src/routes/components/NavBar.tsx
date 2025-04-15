@@ -18,9 +18,9 @@ export const Navbar: React.FC = () => {
   const handleLogout = async () => {
     alert("Logged out!");
     const res = await api.post("/auth/logout", { credentials: "include" });
-    console.log("Log out result: ", res)
-    localStorage.removeItem("user")
-    navigate("/");
+    console.log("Log out result: ", res);
+    localStorage.removeItem("user");
+    navigate("/login");
   };
 
   return (
@@ -76,7 +76,7 @@ export const Navbar: React.FC = () => {
               "&:hover": {
                 bg: "primary",
                 color: "text",
-                cursor: "pointer"
+                cursor: "pointer",
               },
               transition: "all 0.2s ease",
             }}
@@ -93,7 +93,7 @@ export const Navbar: React.FC = () => {
         sx={{
           "&:hover": {
             bg: "highlight",
-            cursor: "pointer"
+            cursor: "pointer",
           },
         }}
       >

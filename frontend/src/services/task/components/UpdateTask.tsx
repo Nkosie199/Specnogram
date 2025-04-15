@@ -45,7 +45,7 @@ const TaskView: React.FC = () => {
       console.error("Error deleting task", err);
       alert("Error deleting task");
     }
-  }
+  };
 
   const handleBack = () => {
     window.history.back();
@@ -88,8 +88,8 @@ const TaskView: React.FC = () => {
         type="datetime-local"
         sx={{
           color: "white",
-          '::-webkit-calendar-picker-indicator': {
-            filter: 'invert(1)',
+          "::-webkit-calendar-picker-indicator": {
+            filter: "invert(1)",
           },
         }}
         value={task.startDate?.substring(0, 16) || ""}
@@ -111,7 +111,13 @@ const TaskView: React.FC = () => {
       <Input id="reporter" name="reporter" value={task.reporter} onChange={handleChange} mb={3} />
 
       <Label htmlFor="assignee">Assignee</Label>
-      <Input id="assignee" name="assignee" value={task.assignee || ""} onChange={handleChange} mb={3} />
+      <Input
+        id="assignee"
+        name="assignee"
+        value={task.assignee || ""}
+        onChange={handleChange}
+        mb={3}
+      />
 
       <Flex sx={{ justifyContent: "space-around", w: "100%", mt: 4, gap: 2 }}>
         <Button onClick={() => handleBack()} variant="secondary">

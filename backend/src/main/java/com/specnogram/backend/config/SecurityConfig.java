@@ -2,6 +2,7 @@ package com.specnogram.backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -18,11 +19,12 @@ public class SecurityConfig {
 
         @Bean
         public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-                http.authorizeHttpRequests(auth -> auth
-                                .requestMatchers("/", "/auth/**", "/oauth2/**").permitAll()
-                                .anyRequest().authenticated())
+                http.cors(Customizer.withDefaults())
+                                .authorizeHttpRequests(auth -> auth
+                                                .requestMatchers("/", "/auth/**", "/oauth2/**").permitAll()
+                                                .anyRequest().authenticated())
                                 .oauth2Login(oauth2 -> oauth2
-                                                .defaultSuccessUrl("http://localhost:3000/oauth/callback", true))
+                                                .defaultSuccessUrl("http://localhost:3000", true))
                                 .logout(logout -> logout
                                                 .logoutSuccessUrl("/"))
                                 .csrf(csrf -> csrf.disable());
